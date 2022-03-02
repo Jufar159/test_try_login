@@ -26,7 +26,7 @@ class GooglePage
     {
         $I = $this->actor;
         $I->amOnPage(self::$URL);
-        $I->seeElement('//div[@data-test-id="login-app-ready"]');
+        $I->waitForElementVisible('//div[@data-test-id="login-app-ready"]', 2);
     }
 
     /**
@@ -35,13 +35,11 @@ class GooglePage
     public function search()
     {
         $I = $this->actor;
-        $I->waitForElementVisible('//div[@class="login-row username"]', 3);
-        $I->fillField('input[type="text"]', 'aleksandr_example_test');
+        $I->seeElement('//div[@class="login-row username"]');
+        $I->fillField('input[name="username"]', 'aleksandr_example_test');
         $I->pressKey('input[type="text"]',\Facebook\WebDriver\WebDriverKeys::ENTER);
-            
-        $I = $this->actor;
-        $I->waitForElementVisible(' //div[@class="login-row password"', 3);
-        $I->fillField('input[type="text"]', 'pochemytak25');
+        $I->waitForElementVisible('//div[@class="login-row password"]');
+        $I->fillField('input[name="password"]', 'pochemytak25');
         $I->pressKey('input[type="text"]',\Facebook\WebDriver\WebDriverKeys::ENTER);
         
     }
