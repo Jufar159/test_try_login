@@ -21,14 +21,8 @@ class InslyCest
         $I->wantTo('input search phrase');
         $googlePage->search();
 
-        $I->wantTo('input search phrase');
-        $googlePage->search();
-        
-        $I->wantTo('verify search results');
-        $googlePage->verifySearch();
-
-        $I->wantTo('click and verify on search result');
-        $googlePage->clickAndVerify();
-
-    }
+        $I->wantTo('make screenshot');
+        $googlePage->makeScreenshot();
+    } 
+    
 }

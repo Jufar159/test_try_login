@@ -35,16 +35,22 @@ class GooglePage
     public function search()
     {
         $I = $this->actor;
-        $I->seeElement('//div[@class="login-row username"]');
+        $I->seeElement('//div[@data-test-id="username-formfield"]');
         $I->fillField('input[name="username"]', 'aleksandr_example_test');
         $I->pressKey('input[type="text"]',\Facebook\WebDriver\WebDriverKeys::ENTER);
         $I->waitForElementVisible('//div[@class="login-row password"]');
         $I->fillField('input[name="password"]', 'pochemytak25');
-        $I->pressKey('input[type="text"]',\Facebook\WebDriver\WebDriverKeys::ENTER);
-        
+        $I->pressKey('input[type="password"]',\Facebook\WebDriver\WebDriverKeys::ENTER);
     }
-    
 
+    public function makeScreenshot()
+    {
+        $I->amOnPage('/user/edit');
+        $I->makeScreenshot('edit_page');
+        // saved to: tests/_output/debug/edit_page.png
+        $I->makeScreenshot();
+        // saved to: tests/_output/debug/2017-05-26_14-24-11_4b3403665fea6.png
+    }
 
     /**
      * Declare UI map for this page here. CSS or XPath allowed.
