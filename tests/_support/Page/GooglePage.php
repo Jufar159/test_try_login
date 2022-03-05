@@ -42,8 +42,11 @@ class GooglePage
         $I->fillField('input[name="password"]', 'pochemytak25');
         $I->pressKey('input[type="password"]',\Facebook\WebDriver\WebDriverKeys::ENTER);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $I->wait(5);
         $I->makeScreenshot();
+=======
+>>>>>>> 59c508d95995827f9aeec85e2ad1f34d9186a6ef
 =======
 >>>>>>> 59c508d95995827f9aeec85e2ad1f34d9186a6ef
     }
