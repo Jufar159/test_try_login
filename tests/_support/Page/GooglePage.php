@@ -35,13 +35,14 @@ class GooglePage
     public function search()
     {
         $I = $this->actor;
-        $I->seeElement('//div[@class="login-row username"]');
+        $I->seeElement('//div[@data-test-id="username-formfield"]');
         $I->fillField('input[name="username"]', 'aleksandr_example_test');
         $I->pressKey('input[type="text"]',\Facebook\WebDriver\WebDriverKeys::ENTER);
-        $I->waitForElementVisible('//div[@class="login-row password"]');
+        $I->waitForElementVisible('//div[@class="login-row password"]',1);
         $I->fillField('input[name="password"]', 'pochemytak25');
-        $I->pressKey('input[type="text"]',\Facebook\WebDriver\WebDriverKeys::ENTER);
-        
+        $I->pressKey('input[type="password"]',\Facebook\WebDriver\WebDriverKeys::ENTER);
+        $I->wait(5);
+        $I->makeScreenshot();
     }
     
 
