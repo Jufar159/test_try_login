@@ -41,11 +41,21 @@ class GooglePage
         $I->waitForElementVisible('//div[@class="login-row password"]',1);
         $I->fillField('input[name="password"]', 'pochemytak25');
         $I->pressKey('input[type="password"]',\Facebook\WebDriver\WebDriverKeys::ENTER);
+<<<<<<< HEAD
         $I->wait(5);
         $I->makeScreenshot();
+=======
+>>>>>>> 59c508d95995827f9aeec85e2ad1f34d9186a6ef
     }
-    
 
+    public function makeScreenshot()
+    {
+        $I->amOnPage('/user/edit');
+        $I->makeScreenshot('edit_page');
+        // saved to: tests/_output/debug/edit_page.png
+        $I->makeScreenshot();
+        // saved to: tests/_output/debug/2017-05-26_14-24-11_4b3403665fea6.png
+    }
 
     /**
      * Declare UI map for this page here. CSS or XPath allowed.
