@@ -5,15 +5,7 @@ suites:
         modules:
             enabled:
                 - WebDriver:
-<<<<<<< HEAD
-<<<<<<< HEAD
                       host: '172.27.111.17'
-=======
-                      host: '192.168.205.8'
->>>>>>> 59c508d95995827f9aeec85e2ad1f34d9186a6ef
-=======
-                      host: '192.168.205.8'
->>>>>>> 59c508d95995827f9aeec85e2ad1f34d9186a6ef
                       url: 'https://account.mail.ru'
                       browser: chrome
                       port: 4444
