@@ -3,7 +3,7 @@ namespace Page;
 
 use Codeception\Util\Locator;
 
-class GooglePage
+class mailPage
 {
     // include url of current page
     public static $URL = '/';
@@ -11,7 +11,7 @@ class GooglePage
     protected $actor;
 
     /**
-     * GooglePage constructor.
+     * mailPage constructor.
      * @param $I \AcceptanceTester
      */
     public function __construct($I)
@@ -38,7 +38,7 @@ class GooglePage
         $I->seeElement('//div[@data-test-id="username-formfield"]');
         $I->fillField('input[name="username"]', 'aleksandr_example_test');
         $I->pressKey('input[type="text"]',\Facebook\WebDriver\WebDriverKeys::ENTER);
-        $I->waitForElementVisible('//div[@class="login-row password"]',1);
+        $I->waitForElementVisible('//div[@class="login-row password"]',2);
         $I->fillField('input[name="password"]', 'pochemytak25');
         $I->pressKey('input[type="password"]',\Facebook\WebDriver\WebDriverKeys::ENTER);
         $I->wait(5);

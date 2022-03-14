@@ -1,4 +1,4 @@
-**Codeception acceptance tests in docker + chrome debug selenium instance**
+**Codeception acceptance tests in docker + chrome**
 
 **Pre-conditions:**
 - Installed docker

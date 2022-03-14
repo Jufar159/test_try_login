@@ -15,10 +15,10 @@ class InslyCest
     public function tryToTest(AcceptanceTester $I)
     {
         $I->wantTo('open mail page');
-        $googlePage = new \Page\GooglePage($I);
-        $googlePage->open();
+        $mailPage = new \Page\mailPage($I);
+        $mailPage->open();
 
         $I->wantTo('make screenshot');
-        $googlePage->search();
+        $mailPage->search();
     } 
 }
